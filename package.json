@@ -23,13 +23,13 @@
   "homepage": "https://github.com/silvermine/eslint-config-silvermine#readme",
   "dependencies": {
     "@silvermine/eslint-plugin-silvermine": "2.3.0-rc.1",
-    "@typescript-eslint/eslint-plugin": "2.16.0",
-    "@typescript-eslint/parser": "2.16.0",
     "typescript": "3.3.1"
   },
   "devDependencies": {
     "@commitlint/cli": "8.3.5",
     "@commitlint/travis-cli": "8.3.5",
+    "@typescript-eslint/eslint-plugin": "3.10.1",
+    "@typescript-eslint/parser": "3.10.1",
     "check-node-version": "4.0.2",
     "cz-conventional-changelog": "3.0.2",
     "grunt": "1.0.4",

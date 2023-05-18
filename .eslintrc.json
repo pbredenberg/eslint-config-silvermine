@@ -1,5 +1,9 @@
 {
 
-   "extends": "./node.js"
+   "extends": "./node.js",
+
+   "rules": {
+      "no-console": "off"
+   }
 
 }

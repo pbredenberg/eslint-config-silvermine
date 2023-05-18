@@ -293,17 +293,69 @@ module.exports = {
             'no-empty-function': [ 'error', { 'allow': [ 'constructors' ] } ],
 
             '@typescript-eslint/adjacent-overload-signatures': 'error',
+
+            // Disable ESLint's camelcase so we can override with our own
+            // naming convention rules.
+            'camelcase': 'off',
+
             '@typescript-eslint/naming-convention': [
                'error',
                {
-                  'selector': [ 'classProperty', 'classMethod' ],
-                  'modifiers': [ 'private', 'protected' ],
-                  'leadingUnderscore': 'require',
-                  'format': [ 'camelCase' ],
+                  selector: 'memberLike',
+                  modifiers: [ 'private' ],
+                  format: [ 'camelCase' ],
+                  leadingUnderscore: 'require',
                },
                {
-                  'selector': [ 'class', 'interface' ],
-                  'format': [ 'PascalCase' ],
+                  selector: 'memberLike',
+                  modifiers: [ 'protected' ],
+                  format: [ 'camelCase' ],
+                  leadingUnderscore: 'require',
+               },
+               {
+                  selector: 'memberLike',
+                  modifiers: [ 'private', 'static' ],
+                  format: [ 'snake_case' ],
+                  leadingUnderscore: 'require',
+               },
+               {
+                  selector: 'memberLike',
+                  modifiers: [ 'public', 'static' ],
+                  format: [ 'snake_case' ],
+                  leadingUnderscore: 'forbid',
+               },
+               {
+                  selector: 'memberLike',
+                  modifiers: [ 'protected', 'static' ],
+                  format: [ 'snake_case' ],
+                  leadingUnderscore: 'require',
+               },
+               {
+                  selector: 'typeLike',
+                  format: [ 'PascalCase' ],
+               },
+               {
+                  selector: 'variable',
+                  format: [ 'camelCase' ],
+               },
+               {
+                  selector: 'function',
+                  modifiers: [ 'global' ],
+                  format: [ 'camelCase' ],
+               },
+               {
+                  selector: 'variable',
+                  modifiers: [ 'global' ],
+                  format: [ 'UPPER_CASE' ],
+               },
+               {
+                  selector: 'parameter',
+                  format: [ 'camelCase' ],
+                  leadingUnderscore: 'allow',
+               },
+               {
+                  selector: 'default',
+                  format: [ 'camelCase' ],
                },
             ],
             // no-shadow is incompatible with TypeScript code.

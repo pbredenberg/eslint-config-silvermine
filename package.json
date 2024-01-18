@@ -30,8 +30,8 @@
   "homepage": "https://github.com/silvermine/eslint-config-silvermine#readme",
   "dependencies": {
     "@silvermine/eslint-plugin-silvermine": "2.4.0",
-    "@typescript-eslint/eslint-plugin": "5.17.0",
-    "@typescript-eslint/parser": "5.17.0",
+    "@typescript-eslint/eslint-plugin": "6.19.0",
+    "@typescript-eslint/parser": "6.19.0",
     "eslint-plugin-vue": "8.7.1",
     "typescript": "4.6.3"
   },

@@ -450,7 +450,7 @@ module.exports = {
                },
             ],
             '@typescript-eslint/no-non-null-assertion': 'error',
-            '@typescript-eslint/no-parameter-properties': [ 'error', { 'allows': [ 'private' ] } ],
+            '@typescript-eslint/parameter-properties': [ 2, { 'allow': [ 'private' ] } ],
             '@typescript-eslint/triple-slash-reference': [ 'error', { 'path': 'never', 'types': 'never', 'lib': 'never' } ],
             '@typescript-eslint/type-annotation-spacing': [
                'error',

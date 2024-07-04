@@ -15,9 +15,7 @@ const getVueRules = require('./partials/vue').getVueRules,
       globals = require('globals'),
       esLintPluginSilvermine = require('@silvermine/eslint-plugin-silvermine'),
       typescriptESLint = require('typescript-eslint'),
-      typescriptESLintParser = require('@typescript-eslint/parser'),
-      vue = require('eslint-plugin-vue'),
-      vueESLintParser = require('vue-eslint-parser');
+      typescriptESLintParser = require('@typescript-eslint/parser');
 
 module.exports = [
    esLint.configs.recommended,
@@ -29,7 +27,6 @@ module.exports = [
 
       'plugins': {
          '@silvermine/eslint-plugin-silvermine': esLintPluginSilvermine, // Our custom rules
-         'vue': vue, // Vue-specific rules
       },
 
       'languageOptions': {
@@ -492,12 +489,9 @@ module.exports = [
    },
    {
       files: [ '**/*.vue' ],
-
       languageOptions: {
-         parser: vueESLintParser,
          parserOptions: {
             parser: typescriptESLintParser,
-            ecmaVersion: 'latest',
             sourceType: 'module',
          },
          globals: {

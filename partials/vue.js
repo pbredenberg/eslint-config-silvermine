@@ -1,11 +1,11 @@
 'use strict';
-const vueRulesBase = require('eslint-plugin-vue/lib/configs/base').rules,
-      vueRulesEssentials = require('eslint-plugin-vue/lib/configs/essential').rules,
-      vue3RulesEssentials = require('eslint-plugin-vue/lib/configs/vue3-essential').rules,
-      vueRulesStronglyRecommended = require('eslint-plugin-vue/lib/configs/strongly-recommended').rules,
-      vue3RulesStronglyRecommended = require('eslint-plugin-vue/lib/configs/vue3-strongly-recommended').rules,
-      vueRulesRecommended = require('eslint-plugin-vue/lib/configs/recommended').rules,
-      vue3RulesRecommended = require('eslint-plugin-vue/lib/configs/vue3-recommended').rules;
+const vueRulesBase = require('eslint-plugin-vue/lib/configs/flat/base').rules,
+      vueRulesEssentials = require('eslint-plugin-vue/lib/configs/flat/vue2-essential').rules,
+      vue3RulesEssentials = require('eslint-plugin-vue/lib/configs/flat/vue3-essential').rules,
+      vueRulesStronglyRecommended = require('eslint-plugin-vue/lib/configs/flat/vue2-strongly-recommended').rules,
+      vue3RulesStronglyRecommended = require('eslint-plugin-vue/lib/configs/flat/vue3-strongly-recommended').rules,
+      vueRulesRecommended = require('eslint-plugin-vue/lib/configs/flat/vue2-recommended').rules,
+      vue3RulesRecommended = require('eslint-plugin-vue/lib/configs/flat/vue3-recommended').rules;
 
 
 const silvermineRulesUniversal = {

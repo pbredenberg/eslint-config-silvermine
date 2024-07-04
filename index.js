@@ -497,7 +497,7 @@ module.exports = [
          parser: vueESLintParser,
          parserOptions: {
             parser: typescriptESLintParser,
-            ecmaVersion: 2020,
+            ecmaVersion: 'latest',
             sourceType: 'module',
          },
          globals: {

@@ -15,7 +15,8 @@ const getVueRules = require('./partials/vue').getVueRules,
       globals = require('globals'),
       esLintPluginSilvermine = require('@silvermine/eslint-plugin-silvermine'),
       typescriptESLint = require('typescript-eslint'),
-      typescriptESLintParser = require('@typescript-eslint/parser');
+      typescriptESLintParser = require('@typescript-eslint/parser'),
+      eslintPluginVue = require('eslint-plugin-vue');
 
 module.exports = [
    esLint.configs.recommended,
@@ -487,6 +488,7 @@ module.exports = [
          '@typescript-eslint/no-empty-interface': 'off',
       },
    },
+   ...eslintPluginVue.configs['flat/recommended'],
    {
       files: [ '**/*.vue' ],
       languageOptions: {

@@ -21,8 +21,8 @@ const testConfig = {
 
 module.exports = {
    complete: [
-      testConfig,
       ...config,
+      testConfig,
    ],
    discrete: testConfig,
 };
